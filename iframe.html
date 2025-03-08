@@ -1,4 +1,6 @@
-window.send = function() {
+<html>
+<script>
+  window.send = function() {
   var iframe = document.getElementById('jsfiddle-frame').contentWindow;
   var message = document.querySelector('#textOutput').value;
   iframe.postMessage(message, '*');
@@ -7,3 +9,10 @@ window.send = function() {
 window.addEventListener('message', function(event) {
   document.querySelector('#textOutput').value = event.data;
 }, false);
+
+</script>
+<body>
+IFrame Test
+</body>
+
+</html>
